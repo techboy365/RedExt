@@ -3,8 +3,8 @@
   
   <p>Browser extension-based Command & Control framework</p>
 
-  [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-  [![Flask](https://img.shields.io/badge/Flask-2.2.5-green)](https://flask.palletsprojects.com/)
+  [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+  [![Flask](https://img.shields.io/badge/Flask-3.1%2B-green)](https://flask.palletsprojects.com/)
   [![SQLite](https://img.shields.io/badge/SQLite-3-blue)](https://www.sqlite.org/)
   [![Chrome](https://img.shields.io/badge/Chrome-MV3-yellow)](https://developer.chrome.com/docs/extensions/mv3/)
   [![Documentation](https://img.shields.io/badge/docs-wiki-red)](https://redext-wiki.netlify.app/)
@@ -72,6 +72,9 @@ RedExt is a sophisticated browser data analysis framework designed for authorize
 ## Installation
 
 ### Server Setup
+
+Requires **Python 3.10–3.14**. On Debian/Ubuntu/WSL, use a virtual environment (system Python is externally managed).
+
 ```bash
 # Clone repository
 git clone https://github.com/Darkrain2009/redext.git
@@ -83,8 +86,8 @@ source venv/bin/activate  # Linux/Mac
 # or
 .\venv\Scripts\activate   # Windows
 
-# Install dependencies
-pip3 install -r requirements.txt
+# Install dependencies (inside the venv)
+pip install -r requirements.txt
 
 # Initialize database
 python3 db_setup.py
@@ -138,7 +141,7 @@ google-chrome --load-extension=/path/to/redext/ext
 ## Technical Architecture
 
 ### Server Component
-- **Framework**: Flask 2.2.5
+- **Framework**: Flask 3.1+
 - **Database**: SQLite3
 - **API**: RESTful JSON endpoints
 

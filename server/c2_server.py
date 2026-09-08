@@ -13,9 +13,10 @@ from datetime import datetime, timedelta
 from flask import (
     Flask, request, jsonify,
     render_template, redirect, url_for,
-    flash, Markup, Response
+    flash, Response
 )
 from flask_cors import CORS
+from markupsafe import Markup
 from typing import Dict
 from urllib.parse import urlparse
 
